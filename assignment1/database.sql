@@ -46,3 +46,12 @@ VALUES
     ('C002', 'Jane Smith', '0002', 'The Relational Model', 40.00, '2023-04-11', '456 Oak Ave', 'Springfield', '12345'),
     ('C003', 'Emily Clark', '0003', 'Database Fundamentals', 45.00, '2023-04-12', '789 Pine Rd', 'Riverside', '67890');
 
+--for 3rd Trigger
+CREATE TABLE MonthlySalesReport (
+    Month INT,
+    Year INT,
+    TotalSales DECIMAL(10, 2)
+);
+
+
+
