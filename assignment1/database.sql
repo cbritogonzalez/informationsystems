@@ -61,7 +61,7 @@ CREATE TABLE MonthlySalesReport (
     TotalSales DECIMAL(10, 2)
 );
 
----Procedures
+---Procedures, for 4th question
 CREATE TABLE customer_orders (
     customer_id VARCHAR(5) PRIMARY KEY,
     customer_name VARCHAR(50) NOT NULL,
@@ -81,4 +81,13 @@ CREATE TABLE MonthlySalesReportPerBook (
 	BookTitle VARCHAR,
     TotalSales DECIMAL(10, 2)
 );
+
+ALTER TABLE MonthlySalesReportPerBook ADD PRIMARY KEY (month, year, booktitle);
+
+CREATE TABLE processedordersforreport (
+    orderId varchar
+);
+
+ALTER TABLE processedordersforreport ADD PRIMARY KEY (orderid);
+
 
