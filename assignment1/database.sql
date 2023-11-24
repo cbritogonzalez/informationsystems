@@ -5,6 +5,14 @@ CREATE TABLE orders (
 	DeliveryZip int
 );
 
+CREATE TABLE orders_audit (
+	CustomerId varchar,
+	OrderId varchar,
+	BookTitle varchar,
+	DeliveryZip int,
+	changed_on timestamp
+);
+
 CREATE TABLE customers (
 	CustomerId varchar,
 	CustomerName varchar
