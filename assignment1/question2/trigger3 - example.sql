@@ -24,4 +24,9 @@ VALUES
 SELECT * FROM monthlysalesreport;
 
 INSERT INTO orders (CustomerID, OrderID, BookTitle, DeliveryZip)
-VALUES ('C003', '0006', 'The Relational Model', '12345');
+VALUES ('C003', '0006', 'The Relational Model', '14345');
+
+INSERT INTO orders (CustomerID, OrderID, BookTitle, DeliveryZip)
+VALUES
+  ('C004', '0007', 'Advanced SQL', '12346'),
+  ('C005', '0008', 'The Relational Model', '118932');
