@@ -2,6 +2,7 @@ CREATE TABLE orders (
 	CustomerId varchar,
 	OrderId varchar,
 	BookTitle varchar,
+	OrderDate date,
 	DeliveryZip int
 );
 
@@ -61,7 +62,7 @@ CREATE TABLE MonthlySalesReport (
     TotalSales DECIMAL(10, 2)
 );
 
----Procedures, for 4th question
+---Procedures
 CREATE TABLE customer_orders (
     customer_id VARCHAR(5) PRIMARY KEY,
     customer_name VARCHAR(50) NOT NULL,
@@ -75,19 +76,5 @@ VALUES
     ('C002', 'Jane Smith', '{"order_id": "0002", "book_titles": ["Advanced SQL", "The Relational Model"], "prices": [60.00, 40.00], "order_date": "2023-04-11", "delivery_address": "456 Oak Ave", "delivery_city": "Springfield", "delivery_zip": "12345"}'),
     ('C003', 'Emily Clark', '{"order_id": "0003", "book_titles": ["Database Fundamentals"], "prices": [45.00], "order_date": "2023-04-12", "delivery_address": "789 Pine Rd", "delivery_city": "Riverside", "delivery_zip": "67890"}');
 
-CREATE TABLE MonthlySalesReportPerBook (
-    Month INT,
-    Year INT,
-	BookTitle VARCHAR,
-    TotalSales DECIMAL(10, 2)
-);
-
-ALTER TABLE MonthlySalesReportPerBook ADD PRIMARY KEY (month, year, booktitle);
-
-CREATE TABLE processedordersforreport (
-    orderId varchar
-);
-
-ALTER TABLE processedordersforreport ADD PRIMARY KEY (orderid);
 
 
