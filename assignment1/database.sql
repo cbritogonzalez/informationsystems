@@ -10,6 +10,7 @@ CREATE TABLE orders_audit (
 	CustomerId varchar,
 	OrderId varchar,
 	BookTitle varchar,
+    OrderDate date,
 	DeliveryZip int,
 	changed_on timestamp
 );
@@ -17,6 +18,12 @@ CREATE TABLE orders_audit (
 CREATE TABLE customers (
 	CustomerId varchar,
 	CustomerName varchar
+);
+
+CREATE TABLE customers_audit (
+	CustomerId varchar,
+	CustomerName varchar,
+	changed_on timestamp
 );
 
 CREATE TABLE orderInformation (
@@ -29,10 +36,23 @@ CREATE TABLE product (
 	Price real
 );
 
+CREATE TABLE product_audit (
+	BookTitle varchar,
+	Price real,
+	changed_on timestamp
+);
+
 CREATE TABLE addresses (
 	DeliveryAddress varchar,
 	DeliveryCity varchar,
 	DeliveryZip int
+);
+
+CREATE TABLE addresses_audit (
+	DeliveryAddress varchar,
+	DeliveryCity varchar,
+	DeliveryZip int,
+	changed_on timestamp
 );
 
 CREATE TABLE Bookstore (
